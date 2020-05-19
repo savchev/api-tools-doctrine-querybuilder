@@ -8,10 +8,9 @@
 
 namespace Laminas\ApiTools\Doctrine\QueryBuilder\Hydrator\Strategy;
 
-use DoctrineModule\Stdlib\Hydrator\Strategy\AbstractCollectionStrategy;
+use Doctrine\Laminas\Hydrator\Strategy\AbstractCollectionStrategy;
 use Laminas\ApiTools\Hal\Link\Link;
 use Laminas\Filter\FilterChain;
-use Laminas\Hydrator\Strategy\StrategyInterface;
 use Laminas\ServiceManager\ServiceManager;
 
 /**
@@ -20,7 +19,7 @@ use Laminas\ServiceManager\ServiceManager;
  * This version is for use with laminas-hyrator v3 and up, and will be aliased to
  * CollectionLink in those versions.
  */
-class CollectionLinkHydratorV3 extends AbstractCollectionStrategy implements StrategyInterface
+class CollectionLinkHydratorV3 extends AbstractCollectionStrategy
 {
     protected $serviceManager;
 
