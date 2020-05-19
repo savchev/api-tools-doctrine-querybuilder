@@ -34,9 +34,11 @@
     },
     "require": {
         "php": "^5.6 || ^7.0",
-        "doctrine/doctrine-module": "^1.2 || ^2.1.8",
+        "alcaeus/mongo-php-adapter": "^1.1",
+        "doctrine/doctrine-module": "^4.0",
+        "jenssegers/mongodb": "^3.6",
         "laminas-api-tools/api-tools-api-problem": "^1.2.2",
-        "laminas-api-tools/api-tools-doctrine": "^2.1",
+        "laminas-api-tools/api-tools-doctrine": "^2.4",
         "laminas-api-tools/api-tools-hal": "^1.4.2",
         "laminas/laminas-hydrator": "^1.1 || ^2.2.1 || ^3.0",
         "laminas/laminas-modulemanager": "^2.7.2",
@@ -45,8 +47,9 @@
         "laminas/laminas-zendframework-bridge": "^1.0"
     },
     "require-dev": {
-        "doctrine/doctrine-mongo-odm-module": "^0.11 || ^1.0",
-        "doctrine/doctrine-orm-module": "^1.1 || ^2.1.3",
+        "mongodb/mongodb": "^1.6",
+        "doctrine/doctrine-mongo-odm-module": "^2.0",
+        "doctrine/doctrine-orm-module": "^3.0",
         "laminas-api-tools/api-tools-provider": "^1.2",
         "laminas/laminas-coding-standard": "~1.0.0",
         "laminas/laminas-i18n": "^2.7.3",
@@ -86,5 +89,15 @@
     },
     "replace": {
         "zfcampus/zf-doctrine-querybuilder": "^1.8.0"
-    }
+    },
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/savchev/zf-doctrine-hydration-module"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/savchev/api-tools-doctrine"
+        }
+    ]
 }

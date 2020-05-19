@@ -8,10 +8,9 @@
 
 namespace Laminas\ApiTools\Doctrine\QueryBuilder\Hydrator\Strategy;
 
-use DoctrineModule\Stdlib\Hydrator\Strategy\AbstractCollectionStrategy;
+use Doctrine\Laminas\Hydrator\Strategy\AbstractCollectionStrategy;
 use Laminas\ApiTools\Hal\Link\Link;
 use Laminas\Filter\FilterChain;
-use Laminas\Hydrator\Strategy\StrategyInterface;
 use Laminas\ServiceManager\ServiceManager;
 
 /**
@@ -22,7 +21,7 @@ use Laminas\ServiceManager\ServiceManager;
  *
  * @returns Link
  */
-class CollectionLinkHydratorV2 extends AbstractCollectionStrategy implements StrategyInterface
+class CollectionLinkHydratorV2 extends AbstractCollectionStrategy
 {
     protected $serviceManager;
 
@@ -38,7 +37,7 @@ class CollectionLinkHydratorV2 extends AbstractCollectionStrategy implements Str
         return $this->serviceManager;
     }
 
-    public function extract($value)
+    public function extract($value, ?object $object = null)
     {
         $config = $this->getServiceManager()->get('config');
         if (! method_exists($value, 'getTypeClass')
